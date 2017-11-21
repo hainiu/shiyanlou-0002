@@ -4,16 +4,20 @@
 import sys
 
 def main()
-    if(len(sys.arvg) != 2)
-        print("Parameter error!")
+    if len(sys.arvg) != 2:
+        print('Parameter error!')
+        exit()
         
     try:
         income = int(sys.argv[1])
             
-    except:
-        print("Parameter error!")
-    	     
-    if 0 < value <= 1500:
+    except ValueError:
+        print('Parameter error!')
+        exit()
+    value = income - 3500
+    if value <= 0:
+        result = 0
+    elif 0 < value <= 1500:
         result = value * 0.03 - 0
     elif 1500 < value <= 4500:
         result = value * 0.1 - 105
@@ -30,4 +34,4 @@ def main()
     print(format(result,".2f"))    
           
     if __name__ == '__main__':
-    print(result)
+        main()
