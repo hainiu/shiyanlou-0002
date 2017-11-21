@@ -4,7 +4,7 @@
 import sys
 
 def main():
-    if len(sys.arvg) != 2:
+    if len(sys.argv) != 2:
         print('Parameter error!')
         exit()
         
